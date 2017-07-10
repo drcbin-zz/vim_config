@@ -4,6 +4,11 @@ set helplang=cn "设置中文帮助"
 " set mouse = a
 syntax enable
 
+
+" 设置编码
+set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
+
+" 设置和系统剪切板共用
 set clipboard=unnamed
 " map y +y
 " map Y +Y
@@ -230,7 +235,7 @@ let g:rainbow_conf = {
     \            'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/', 'start=/{/ end=/}/ fold', 'start=/(/ end=/)/ containedin=vimFuncBody', 'start=/\[/ end=/\]/ containedin=vimFuncBody', 'start=/{/ end=/}/ fold containedin=vimFuncBody'],
     \        },
     \        'html': {
-    \            'parentheses': ['start=/\v\<((area|base|br|col|embed|hr|img|input|keygen|link|menuitem|meta|param|source|track|wbr)[ > ])@!\z([-_:a-zA-Z0-9]+)(\s+[-_:a-zA-Z0-9]+(\=("[^"]*"|'."'".'[^'."'".']*'."'".'|[^ '."'".'"><=`]*))?)*\>/ end=#</\z1># fold'],
+    \            'parentheses': ['start=/\v\<((div|form|area|base|br|col|embed|hr|img|input|keygen|link|menuitem|meta|param|source|track|wbr)[ > ])@!\z([-_:a-zA-Z0-9]+)(\s+[-_:a-zA-Z0-9]+(\=("[^"]*"|'."'".'[^'."'".']*'."'".'|[^ '."'".'"><=`]*))?)*\>/ end=#</\z1># fold'],
     \        },
     \        'css': 0,
     \    }
@@ -246,6 +251,9 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 " # 每次保存的时候做检查
 let g:syntastic_check_on_wq = 1
+
+" 指定语法检查工具
+let g:syntastic_python_checkers = ['python']
 
 
 
